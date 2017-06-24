@@ -1,0 +1,44 @@
+{
+  "name": "Person",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "mixins": {
+    "Computed": {
+      "properties": {
+        "fullName": "computeFullName"
+      }
+    }
+  },
+  "properties": {
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "lname": {
+      "type": "string",
+      "required": true
+    },
+    "gender": {
+      "type": "string"
+    },
+    "birthdate": {
+      "type": "date"
+    },
+    "fullName": {
+      "type": "string"
+    }
+  },
+  "validations": [],
+  "relations": {
+    "addressList": {
+      "type": "embedsMany",
+      "model": "Address",
+      "property": "addresses"
+    }
+  },
+  "acls": [],
+  "methods": {}
+}

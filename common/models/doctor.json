@@ -1,0 +1,44 @@
+{
+  "name": "Doctor",
+  "base": "Person",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "speciality": {
+      "type": "string",
+      "required": true
+    }
+  },
+  "validations": [],
+  "relations": {
+    "patientList": {
+      "type": "referencesMany",
+      "model": "Patient",
+      "foreignKey": "patients"
+    },
+    "doctorsOffice": {
+      "type": "belongsTo",
+      "model": "DoctorsOffice",
+      "foreignKey": ""
+    },
+    "serviceTypeList": {
+      "type": "embedsMany",
+      "model": "ServiceType",
+      "foreignKey": "serviceTypes"
+    },
+    "contactInfoList": {
+      "type": "embedsMany",
+      "model": "ContactInfo",
+      "foreignKey": "contactInfos"
+    },
+    "appointments": {
+      "type": "hasMany",
+      "model": "Appointment",
+      "foreignKey": ""
+    }
+  },
+  "acls": [],
+  "methods": {}
+}

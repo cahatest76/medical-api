@@ -1,0 +1,24 @@
+{
+  "name": "Patient",
+  "base": "Person",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {},
+  "validations": [],
+  "relations": {
+    "doctorList": {
+      "type": "referencesMany",
+      "model": "Doctor",
+      "foreignKey": "doctors"
+    },
+    "appointments": {
+      "type": "hasMany",
+      "model": "Appointment",
+      "foreignKey": ""
+    }
+  },
+  "acls": [],
+  "methods": {}
+}

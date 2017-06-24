@@ -1,0 +1,19 @@
+{
+  "name": "DoctorsOffice",
+  "base": "Place",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {},
+  "validations": [],
+  "relations": {
+    "doctors": {
+      "type": "hasMany",
+      "model": "Doctor",
+      "foreignKey": ""
+    }
+  },
+  "acls": [],
+  "methods": {}
+}

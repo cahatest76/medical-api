@@ -1,0 +1,51 @@
+{
+  "name": "Appointment",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "startTime": {
+      "type": "date",
+      "required": true
+    },
+    "endTime": {
+      "type": "date",
+      "required": true
+    },
+    "subject": {
+      "type": "string",
+      "required": true
+    },
+    "appointmentType": {
+      "type": "string"
+    },
+    "reason": {
+      "type": "string"
+    },
+    "note": {
+      "type": "string"
+    }
+  },
+  "validations": [],
+  "relations": {
+    "addresses": {
+      "type": "embedsOne",
+      "model": "Address",
+      "foreignKey": ""
+    },
+    "doctor": {
+      "type": "belongsTo",
+      "model": "Doctor",
+      "foreignKey": ""
+    },
+    "patient": {
+      "type": "belongsTo",
+      "model": "Patient",
+      "foreignKey": ""
+    }
+  },
+  "acls": [],
+  "methods": {}
+}
