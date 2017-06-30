@@ -1,0 +1,38 @@
+{
+  "name": "OnBoarding",
+  "base": "Person",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "onBoardingType": {
+      "type": "string",
+      "required": true
+    },
+    "password": {
+      "type": "string",
+      "required": true
+    }
+  },
+  "validations": [],
+  "relations": {
+    "contactInfoList": {
+      "type": "embedsMany",
+      "model": "ContactInfo",
+      "foreignKey": "contactInfos"
+    },
+    "patients": {
+      "type": "embedsOne",
+      "model": "Patient",
+      "foreignKey": ""
+    },
+    "doctors": {
+      "type": "embedsOne",
+      "model": "Doctor",
+      "foreignKey": ""
+    }
+  },
+  "acls": [],
+  "methods": {}
+}

@@ -17,6 +17,16 @@
       "type": "hasMany",
       "model": "Appointment",
       "foreignKey": ""
+    },
+    "account": {
+      "type": "belongsTo",
+      "model": "Account",
+      "foreignKey": ""
+    },
+    "contactInfoList": {
+      "type": "embedsMany",
+      "model": "ContactInfo",
+      "foreignKey": "contactInfos"
     }
   },
   "acls": [],
