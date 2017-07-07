@@ -17,6 +17,11 @@
       "type": "embedsOne",
       "model": "Address",
       "foreignKey": ""
+    },
+    "contactInfoList": {
+      "type": "embedsMany",
+      "model": "ContactInfo",
+      "foreignKey": "contactInfos"
     }
   },
   "acls": [],

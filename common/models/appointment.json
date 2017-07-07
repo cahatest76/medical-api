@@ -26,15 +26,16 @@
     },
     "note": {
       "type": "string"
+    },
+    "providerName": {
+      "type": "string"
+    },
+    "receiverName": {
+      "type": "string"
     }
   },
   "validations": [],
   "relations": {
-    "addresses": {
-      "type": "embedsOne",
-      "model": "Address",
-      "foreignKey": ""
-    },
     "doctor": {
       "type": "belongsTo",
       "model": "Doctor",
@@ -44,6 +45,21 @@
       "type": "belongsTo",
       "model": "Patient",
       "foreignKey": ""
+    },
+    "places": {
+      "type": "embedsOne",
+      "model": "Place",
+      "foreignKey": ""
+    },
+    "providerContactInfoList": {
+      "type": "embedsMany",
+      "model": "ContactInfo",
+      "property": "providerContactInfos"
+    },
+    "receiverContactInfoList": {
+      "type": "embedsMany",
+      "model": "ContactInfo",
+      "property": "receiverContactInfos"
     }
   },
   "acls": [],
